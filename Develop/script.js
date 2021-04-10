@@ -47,13 +47,23 @@ function generatePassword() {
   }
 }
 
-function generateRandomLetter {
+function generateRandomLetter() {
   var letters = 'abcdefghijklmnopqrstuvwxyz'
   var value = Math.floor(Math.random() * 25);
-  letter = letters[value]
+  return letter = letters[value]
 }
 
+function generateRandomLetter() {
+  var numbers = '0123456789'
+  var value = Math.floor(Math.random() * 9);
+  return number = numbers[value]
+}
 
+function generateRandomSpecialChar() {
+  var specials = '~`!@#$%^&*()-_=+[{]}|;:<,>./?'
+  var value = Math.floor(Math.random() * 28);
+  return special = specials[value]
+}
 
 
 var randomNumber = function(min, max) {
