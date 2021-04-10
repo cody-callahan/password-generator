@@ -22,24 +22,43 @@ function generatePassword() {
 
   var CharArray = [];
   if (promptLowercase) {
-    CharArray[CharArray.length] = ["lowerCase"]
+    CharArray[CharArray.length] = "lowerCase"
   } 
   if (promptUppercase) {
-    CharArray[CharArray.length] = ["upperCase"]
+    CharArray[CharArray.length] = "upperCase"
   }
   if (promptNumeric) {
-    CharArray[CharArray.length] = ["numeric"]
+    CharArray[CharArray.length] = "numeric"
   }
   if (promptSpecialCharacters) {
-    CharArray[CharArray.length] = ["special"]
+    CharArray[CharArray.length] = "special"
   }
 
   //if we're missing a selected character type, just callback the function
   NewPassword = [];
 
   for (let index = 0; index < promptLength; index++) {
-    //debugger;
-    NewPassword.push(generateRandomLetter());
+    debugger;
+    
+    for (let i = 0; i < CharArray.length; i++) {
+      // 1 / character types
+      var CharType = CharArray[Math.floor(Math.random() * (CharArray.length - 1) + 1)];
+      switch (CharType) {
+        case "lowerCase":
+          NewPassword.push(generateRandomLetter().toLowerCase());
+          break;
+        case "upperCase":
+          NewPassword.push(generateRandomLetter().toUpperCase());
+          break;
+        case "numeric":
+          NewPassword.push(generateRandomNumber());
+          break;
+        case "special":
+          NewPassword.push(generateRandomSpecialChar());
+          break;
+      }
+      
+    }
   };
 
   NewPassword = NewPassword.join("");
