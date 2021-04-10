@@ -1,6 +1,7 @@
 
 // Assignment code here
 function generatePassword() {
+  
   var promptLength = window.prompt("How long do you want your password to be (between 8 and 128 characters");
   
   if (promptLength === "" || promptLength === null || promptLength < 8 || promptLength > 128) {
@@ -19,12 +20,7 @@ function generatePassword() {
     return generatePassword();
   };
 
-  var promptLowercase = T;
-  var promptUppercase = F;
-  var promptNumeric = T;
-  var promptSpecialCharacters = F;
-
-  var CharArray = []
+  var CharArray = [];
   if (promptLowercase) {
     CharArray[CharArray.length] = ["lowerCase"]
   } 
@@ -39,30 +35,45 @@ function generatePassword() {
   }
 
   //if we're missing a selected character type, just callback the function
-  password = [];
+  NewPassword = [];
 
-  for (let index = 0; index < promptLength.length; index++) {
-    const element = array[index];
+  for (let index = 0; index < promptLength; index++) {
+    //debugger;
+    NewPassword.push(generateRandomLetter());
+  };
+
+  NewPassword = NewPassword.join("");
     
+  return NewPassword;
+
   }
-}
+
+
+
+// NewPassword = [];
+
+// for (let index = 0; index < 9; index++) {
+//   NewPassword.push(generateRandomLetter());
+//   console.log(index);
+// };
+
 
 function generateRandomLetter() {
-  var letters = 'abcdefghijklmnopqrstuvwxyz'
+  var letters = 'abcdefghijklmnopqrstuvwxyz';
   var value = Math.floor(Math.random() * 25);
-  return letter = letters[value]
+  return letter = letters[value];
 }
 
-function generateRandomLetter() {
-  var numbers = '0123456789'
+function generateRandomNumber() {
+  var numbers = '0123456789';
   var value = Math.floor(Math.random() * 9);
-  return number = numbers[value]
+  return number = numbers[value];
 }
 
 function generateRandomSpecialChar() {
-  var specials = '~`!@#$%^&*()-_=+[{]}|;:<,>./?'
+  var specials = '~`!@#$%^&*()-_=+[{]}|;:<,>./?';
   var value = Math.floor(Math.random() * 28);
-  return special = specials[value]
+  return special = specials[value];
 }
 
 
