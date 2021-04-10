@@ -38,8 +38,8 @@ function generatePassword() {
   NewPassword = [];
 
   for (let index = 0; index < promptLength; index++) {
-    debugger;    
-      var CharType = CharArray[Math.floor(Math.random() * (CharArray.length - 1))];
+    //debugger;    
+      var CharType = CharArray[Math.floor(Math.random() * (CharArray.length))];
       switch (CharType) {
         case "lowerCase":
           NewPassword.push(generateRandomLetter().toLowerCase());
