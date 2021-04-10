@@ -23,15 +23,19 @@ function generatePassword() {
   var promptUppercase = F;
   var promptNumeric = T;
   var promptSpecialCharacters = F;
-  
 
-  var myArray = {"lowercase": promptLowercase, "uppercase": promptUppercase, "numeric": promptNumeric, "specialCharacters": promptSpecialCharacters};
-  
-  var charBooleanArray = [{promptLowercase}, promptUppercase, promptNumeric, promptSpecialCharacters]
-  var CharArray = [];
-
-  for (i; i < 4; i++) {
-    CharArray[CharArray] = ;
+  var CharArray = []
+  if (promptLowercase) {
+    CharArray[CharArray.length] = ["lowerCase"]
+  } 
+  if (promptUppercase) {
+    CharArray[CharArray.length] = ["upperCase"]
+  }
+  if (promptNumeric) {
+    CharArray[CharArray.length] = ["numeric"]
+  }
+  if (promptSpecialCharacters) {
+    CharArray[CharArray.length] = ["special"]
   }
 
   //if we're missing a selected character type, just callback the function
@@ -42,6 +46,14 @@ function generatePassword() {
     
   }
 }
+
+function generateRandomLetter {
+  var letters = 'abcdefghijklmnopqrstuvwxyz'
+  var value = Math.floor(Math.random() * 25);
+  letter = letters[value]
+}
+
+
 
 
 var randomNumber = function(min, max) {
