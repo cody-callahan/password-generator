@@ -38,11 +38,8 @@ function generatePassword() {
   NewPassword = [];
 
   for (let index = 0; index < promptLength; index++) {
-    debugger;
-    
-    for (let i = 0; i < CharArray.length; i++) {
-      // 1 / character types
-      var CharType = CharArray[Math.floor(Math.random() * (CharArray.length - 1) + 1)];
+    debugger;    
+      var CharType = CharArray[Math.floor(Math.random() * (CharArray.length - 1))];
       switch (CharType) {
         case "lowerCase":
           NewPassword.push(generateRandomLetter().toLowerCase());
@@ -57,8 +54,6 @@ function generatePassword() {
           NewPassword.push(generateRandomSpecialChar());
           break;
       }
-      
-    }
   };
 
   NewPassword = NewPassword.join("");
