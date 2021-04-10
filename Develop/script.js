@@ -19,8 +19,19 @@ function generatePassword() {
     return generatePassword();
   };
 
+  var promptLowercase = T;
+  var promptUppercase = F;
+  var promptNumeric = T;
+  var promptSpecialCharacters = F;
+  
+
+  var myArray = {"lowercase": promptLowercase, "uppercase": promptUppercase, "numeric": promptNumeric, "specialCharacters": promptSpecialCharacters};
+  
+  var charBooleanArray = [{promptLowercase}, promptUppercase, promptNumeric, promptSpecialCharacters]
+  var CharArray = [];
+
   for (i; i < 4; i++) {
-    CharType[] = 
+    CharArray[CharArray] = ;
   }
 
   //if we're missing a selected character type, just callback the function
